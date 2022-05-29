@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet var csrdButtons: [UIButton]!
     
+    @IBOutlet weak var FlipsLabel: UILabel!
+   
+    
     var flipCard = 0
     
     override func viewDidLoad() {
@@ -38,11 +41,16 @@ var emojiChoises: [String] = ["🦁","🐻","🦁","🐻" ]
     func flipCard (wihtEmoji emoji: String, on button:UIButton){
         if button.currentTitle == emoji{
             button.setTitle("", for: .normal)
+            button.backgroundColor = .systemOrange
         } else {
             button.setTitle(emoji, for: .normal)
+            button.backgroundColor = .systemBackground
         }
     }
     
-    
+
+
 }
+    
+    
 
