@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var FlipsLabel: UILabel!
    
     
-    var flipCard = 0
+    var flipCard = 0{
+        didSet{
+            FlipsLabel.text = "Flips: \(flipCard)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
