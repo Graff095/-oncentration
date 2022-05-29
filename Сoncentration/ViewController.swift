@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var csrdButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+var emojiChoises: [String] = ["🦁","🐻","🦁","🐻" ]
 }
 
