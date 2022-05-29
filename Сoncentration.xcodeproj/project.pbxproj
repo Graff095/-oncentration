@@ -11,12 +11,8 @@
 		41D1F5962843637A0088511D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5952843637A0088511D /* SceneDelegate.swift */; };
 		41D1F5982843637A0088511D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5972843637A0088511D /* ViewController.swift */; };
 		41D1F59B2843637A0088511D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D1F5992843637A0088511D /* Main.storyboard */; };
-		41D1F59E2843637A0088511D /* _oncentration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F59C2843637A0088511D /* _oncentration.xcdatamodeld */; };
 		41D1F5A02843637A0088511D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D1F59F2843637A0088511D /* Assets.xcassets */; };
 		41D1F5A32843637A0088511D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D1F5A12843637A0088511D /* LaunchScreen.storyboard */; };
-		41D1F5AE2843637B0088511D /* _oncentrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5AD2843637B0088511D /* _oncentrationTests.swift */; };
-		41D1F5B82843637B0088511D /* _oncentrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5B72843637B0088511D /* _oncentrationUITests.swift */; };
-		41D1F5BA2843637B0088511D /* _oncentrationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5B92843637B0088511D /* _oncentrationUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,15 +38,11 @@
 		41D1F5952843637A0088511D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		41D1F5972843637A0088511D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41D1F59A2843637A0088511D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		41D1F59D2843637A0088511D /* _oncentration.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _oncentration.xcdatamodel; sourceTree = "<group>"; };
 		41D1F59F2843637A0088511D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D1F5A22843637A0088511D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D1F5A42843637A0088511D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41D1F5A92843637B0088511D /* СoncentrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "СoncentrationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41D1F5AD2843637B0088511D /* _oncentrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _oncentrationTests.swift; sourceTree = "<group>"; };
 		41D1F5B32843637B0088511D /* СoncentrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "СoncentrationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41D1F5B72843637B0088511D /* _oncentrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _oncentrationUITests.swift; sourceTree = "<group>"; };
-		41D1F5B92843637B0088511D /* _oncentrationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _oncentrationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				41D1F5922843637A0088511D /* Сoncentration */,
-				41D1F5AC2843637B0088511D /* СoncentrationTests */,
-				41D1F5B62843637B0088511D /* СoncentrationUITests */,
 				41D1F5912843637A0088511D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,26 +98,8 @@
 				41D1F59F2843637A0088511D /* Assets.xcassets */,
 				41D1F5A12843637A0088511D /* LaunchScreen.storyboard */,
 				41D1F5A42843637A0088511D /* Info.plist */,
-				41D1F59C2843637A0088511D /* _oncentration.xcdatamodeld */,
 			);
 			path = "Сoncentration";
-			sourceTree = "<group>";
-		};
-		41D1F5AC2843637B0088511D /* СoncentrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				41D1F5AD2843637B0088511D /* _oncentrationTests.swift */,
-			);
-			path = "СoncentrationTests";
-			sourceTree = "<group>";
-		};
-		41D1F5B62843637B0088511D /* СoncentrationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				41D1F5B72843637B0088511D /* _oncentrationUITests.swift */,
-				41D1F5B92843637B0088511D /* _oncentrationUITestsLaunchTests.swift */,
-			);
-			path = "СoncentrationUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D1F5982843637A0088511D /* ViewController.swift in Sources */,
-				41D1F59E2843637A0088511D /* _oncentration.xcdatamodeld in Sources */,
 				41D1F5942843637A0088511D /* AppDelegate.swift in Sources */,
 				41D1F5962843637A0088511D /* SceneDelegate.swift in Sources */,
 			);
@@ -272,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D1F5AE2843637B0088511D /* _oncentrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D1F5BA2843637B0088511D /* _oncentrationUITestsLaunchTests.swift in Sources */,
-				41D1F5B82843637B0088511D /* _oncentrationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,19 +570,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		41D1F59C2843637A0088511D /* _oncentration.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				41D1F59D2843637A0088511D /* _oncentration.xcdatamodel */,
-			);
-			currentVersion = 41D1F59D2843637A0088511D /* _oncentration.xcdatamodel */;
-			path = _oncentration.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 41D1F5882843637A0088511D /* Project object */;
 }
