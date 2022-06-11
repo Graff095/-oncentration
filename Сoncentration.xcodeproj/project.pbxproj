@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411E82722849EB110083AC41 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E82712849EB110083AC41 /* Card.swift */; };
+		411E82742849EB610083AC41 /* Concetration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E82732849EB610083AC41 /* Concetration.swift */; };
 		41D1F5942843637A0088511D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5932843637A0088511D /* AppDelegate.swift */; };
 		41D1F5962843637A0088511D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5952843637A0088511D /* SceneDelegate.swift */; };
 		41D1F5982843637A0088511D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1F5972843637A0088511D /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411E82712849EB110083AC41 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		411E82732849EB610083AC41 /* Concetration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concetration.swift; sourceTree = "<group>"; };
 		41D1F5902843637A0088511D /* Сoncentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Сoncentration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D1F5932843637A0088511D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D1F5952843637A0088511D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				41D1F5932843637A0088511D /* AppDelegate.swift */,
+				411E82712849EB110083AC41 /* Card.swift */,
+				411E82732849EB610083AC41 /* Concetration.swift */,
 				41D1F5952843637A0088511D /* SceneDelegate.swift */,
 				41D1F5972843637A0088511D /* ViewController.swift */,
 				41D1F5992843637A0088511D /* Main.storyboard */,
@@ -236,6 +242,8 @@
 				41D1F5982843637A0088511D /* ViewController.swift in Sources */,
 				41D1F5942843637A0088511D /* AppDelegate.swift in Sources */,
 				41D1F5962843637A0088511D /* SceneDelegate.swift in Sources */,
+				411E82742849EB610083AC41 /* Concetration.swift in Sources */,
+				411E82722849EB110083AC41 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
