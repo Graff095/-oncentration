@@ -39,23 +39,45 @@ var emojiChoises: [String] = ["🦁","🐻","🦁","🐻" ]
     flipCard += 1
         
         if let cardNumber = cardButtons.firstIndex(of: sender) {
-            flipCard(wihtEmoji: emojiChoises[cardNumber], on: sender)
+            game.choseCard(at: cardNumber) // передаем индекс карты в модель Concentration чтоб  запустить алгоритм
+            upDateVIewFromModel ()
     } else {
         print ("Нет такой карточки")
     }
     
     }
     
-    
-    func flipCard (wihtEmoji emoji: String, on button:UIButton){
-        if button.currentTitle == emoji{
-            button.setTitle("", for: .normal)
-            button.backgroundColor = .systemOrange
-        } else {
-            button.setTitle(emoji, for: .normal)
-            button.backgroundColor = .systemBackground
+    func upDateVIewFromModel(){
+        for index in cardButtons.indices{
+            let button = cardButtons[index] // передали индекс кнопки
+            let cards = game.cards[index] // передали индексы карт
+            if cards.isFaceUp {button.setTitle(emojiIndentifeir(for: cards), for: .normal)
+                button.backgroundColor = .systemBackground
+                
+            } // если карта перевернутая то меняем цвет на белый и тсавим эмодзи
+            else {button.setTitle("", for: .normal)
+                button.backgroundColor = cards.isMatched ? .black : .systemOrange
+                // если карты совпали фон станет черным если нет то оранживым
+                
+            } // если карта  не перевернутая то ставим оранживый цвет
         }
-    }
+                
+    }// обвновлении экрана после нажатия
+    
+    
+    
+    
+    
+    
+//    func flipCard (wihtEmoji emoji: String, on button:UIButton){
+//        if button.currentTitle == emoji{
+//            button.setTitle("", for: .normal)
+//            button.backgroundColor = .systemOrange
+//        } else {
+//            button.setTitle(emoji, for: .normal)
+//            button.backgroundColor = .systemBackground
+//        }
+//    }
     
 
 
