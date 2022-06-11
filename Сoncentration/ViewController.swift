@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var FlipsLabel: UILabel!
    
     
+    
     var flipCard = 0{
         didSet{
             FlipsLabel.text = "Flips: \(flipCard)"
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
         return emojiDictoanary[card.indentifier] ?? "?" // если эмодзиДикшарены не пустой то возрошаем его а если пустокй то впоросительный знак возрошаем
     }
     
+   
     
     @IBAction func touchCard(_ sender: UIButton) {
         
