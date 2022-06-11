@@ -9,7 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var csrdButtons: [UIButton]!
+    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2)
+     // экземляр класса для того чтобы viewcontroler мог общаться с моделью
+     //numberOfPairsOfCards: cardButtons.count/2 добавили разделив количесток кнопок на два карточки
+    
+    
+    @IBOutlet var cardButtons: [UIButton]!
     
     @IBOutlet weak var FlipsLabel: UILabel!
    
@@ -33,7 +38,7 @@ var emojiChoises: [String] = ["🦁","🐻","🦁","🐻" ]
     @IBAction func touchCard(_ sender: UIButton) {
     flipCard += 1
         
-        if let cardNumber = csrdButtons.firstIndex(of: sender) {
+        if let cardNumber = cardButtons.firstIndex(of: sender) {
             flipCard(wihtEmoji: emojiChoises[cardNumber], on: sender)
     } else {
         print ("Нет такой карточки")
