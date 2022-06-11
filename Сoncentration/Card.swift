@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card {
+
     struct Card {
         
         var isFaceUp = false
@@ -26,4 +26,4 @@ struct Card {
          // испол инит перейдаем значение
      }
 
-}
+
