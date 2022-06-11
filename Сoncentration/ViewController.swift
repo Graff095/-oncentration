@@ -31,8 +31,21 @@ class ViewController: UIViewController {
     }
 
 
-var emojiChoises: [String] = ["🦁","🐻","🦁","🐻" ]
+    var emojiDictoanary = [Int:String] ()
     
+    var emojiChoises: [String] = ["🐻","🦁","🐔","🐧","🐸","🐓","🦝","🐓"]
+    // колекция аутлетов сделана для того  чтоб не создовать для каждой кномки одельный аутлет
+    //emojiChoises - массив эмоджи чтоб дать каждой кнопки тайтлы
+    
+    func emojiIndentifeir (for card: Card) ->String{
+       
+        if emojiDictoanary[card.indentifier] == nil{ // если в эмодзиДикшаране нет эмоджи по индефекатору карты то
+            let randomIndex = Int(arc4random_uniform (UInt32(emojiChoises.count))) // создаем переменую рандомным значением из эмодзиКолекции
+            emojiDictoanary[card.indentifier] = emojiChoises.remove(at: randomIndex) // добавляем эмодзи согласно это индификатоку
+        }
+        
+        return emojiDictoanary[card.indentifier] ?? "?" // если эмодзиДикшарены не пустой то возрошаем его а если пустокй то впоросительный знак возрошаем
+    }
     
     
     @IBAction func touchCard(_ sender: UIButton) {
