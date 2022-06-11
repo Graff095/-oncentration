@@ -49,7 +49,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func touchCard(_ sender: UIButton) {
-    flipCard += 1
+        
+        flipCard += 1
         
         if let cardNumber = cardButtons.firstIndex(of: sender) {
             game.choseCard(at: cardNumber) // передаем индекс карты в модель Concentration чтоб  запустить алгоритм
