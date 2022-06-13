@@ -14,8 +14,8 @@ import Foundation
         var isMatched = false
         var indentifier: Int
         
-        static var identifierNumber = 0
-         static func identifierGenerator () -> Int {
+        private  static var identifierNumber = 0
+        private static func identifierGenerator () -> Int {
              identifierNumber += 1
              return identifierNumber
          }

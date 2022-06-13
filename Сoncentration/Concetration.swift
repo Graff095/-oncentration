@@ -8,10 +8,10 @@
 import Foundation
 class Concentration {
     
-    var  cards = [Card] ()
+    private (set) var  cards = [Card] ()
     
-    var indexOfOneAndOnlyFaceUpCard: Int? {
-        get{
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
+        get{ // вычесляется индекс ранее перевернутой карты
             var foundIndex: Int?
             for index in cards.indices {
                 if cards[index].isFaceUp { // если у нас карта индексом  октрыта
@@ -24,7 +24,7 @@ class Concentration {
                 
             }
                 
-            return foundIndex // и возрошаем найденный индекс
+            return foundIndex // и возрошаем найденный индекс и пердаем ранее нажатой кнопки 
             
             
         }

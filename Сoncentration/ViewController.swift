@@ -9,27 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+   private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
      // экземляр класса для того чтобы viewcontroler мог общаться с моделью
      //numberOfPairsOfCards: cardButtons.count/2 добавили разделив количесток кнопок на два карточки
-    
+    // private - чтоб не кто не мог меняет количество праных кнопок
     
     var numberOfPairsOfCards: Int {
         return (cardButtons.count + 1)/2
         // создали отделную переменую что бы легко вычеслин количество панных карточекff
     }
     
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private var cardButtons: [UIButton]!
     
-    @IBOutlet weak var FlipsLabel: UILabel!
+    @IBOutlet weak private var FlipsLabel: UILabel!
    
     
     
-    var flipCard = 0{
+    private (set) var flipCard = 0{
         didSet{
             FlipsLabel.text = "Flips: \(flipCard)"
         }
-    }
+    } // private (set)  - чтоб не кто не мог дать новое значение этой переменной
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     }
 
 
-    var emojiDictoanary = [Int:String] ()
+    private var emojiDictoanary = [Int:String] ()
     
-    var emojiChoises: [String] = ["🐻","🦁","🐔","🐧","🐸","🐓","🦝","🐓"]
+    private var emojiChoises: [String] = ["🐻","🦁","🐔","🐧","🐸","🐓","🦝","🐓"]
     // колекция аутлетов сделана для того  чтоб не создовать для каждой кномки одельный аутлет
     //emojiChoises - массив эмоджи чтоб дать каждой кнопки тайтлы
     
-    func emojiIndentifeir (for card: Card) ->String{
+    private func emojiIndentifeir (for card: Card) ->String{
        
         if emojiDictoanary[card.indentifier] == nil{ // если в эмодзиДикшаране нет эмоджи по индефекатору карты то
             let randomIndex = Int(arc4random_uniform (UInt32(emojiChoises.count))) // создаем переменую рандомным значением из эмодзиКолекции
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     
     }
     
-    func upDateVIewFromModel(){
+    private  func upDateVIewFromModel(){
         for index in cardButtons.indices{
             let button = cardButtons[index] // передали индекс кнопки
             let cards = game.cards[index] // передали индексы карт
