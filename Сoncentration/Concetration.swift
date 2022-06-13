@@ -10,12 +10,44 @@ class Concentration {
     
     var  cards = [Card] ()
     
-    var indexOfOneAndOnlyFaceUpCard: Int?
+    var indexOfOneAndOnlyFaceUpCard: Int? {
+        get{
+            var foundIndex: Int?
+            for index in cards.indices {
+                if cards[index].isFaceUp { // если у нас карта индексом  октрыта
+                    if foundIndex == nil  { // и елси в найденом иднексе ничего нет
+                        foundIndex = index // то передаем туда индекс карты
+                    } else {
+                        return nil // а если есть то удаляем
+                    }
+                }
+                
+            }
+                
+            return foundIndex // и возрошаем найденный индекс
+            
+            
+        }
+        
+        set{
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }  // ??????
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
     // indexOfOneAndOnlyFaceUpCard - индекс одной перевернутой карточки
     
     func choseCard (at index:Int) {
         
-        if !cards[index].isMatched// если наша карта не является перевернутой то;
+        if !cards[index].isMatched// если наша карта не является совпавшей то;
         {
             if let matchingIndex = indexOfOneAndOnlyFaceUpCard, matchingIndex != index // если индекс нажатой и перевернутой ранее кнопки не совпадает то
             {
@@ -25,14 +57,14 @@ class Concentration {
                     cards [index].isMatched = true // сейчас нажатая совпала
                 }
                 cards[index].isFaceUp = true // сейчас нажатая перевернут
-                            indexOfOneAndOnlyFaceUpCard = nil // а ранее нажатую удалить из переменной
+                            //indexOfOneAndOnlyFaceUpCard = nil // а ранее нажатую удалить из переменной
             } else {
-                for flipDown in cards.indices {
-                    cards[flipDown].isFaceUp = false
-                    // перевернуть все карты лицом вниз
-                    
-                }
-                cards[index].isFaceUp = true // перевернут нажатую карточку
+//                for flipDown in cards.indices {
+//                    cards[flipDown].isFaceUp = false
+//                    // перевернуть все карты лицом вниз
+//                    
+//                }
+//                cards[index].isFaceUp = true // перевернут нажатую карточку
                 indexOfOneAndOnlyFaceUpCard = index // ????
             }
             
