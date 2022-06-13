@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2)
+    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
      // экземляр класса для того чтобы viewcontroler мог общаться с моделью
      //numberOfPairsOfCards: cardButtons.count/2 добавили разделив количесток кнопок на два карточки
     
+    
+    var numberOfPairsOfCards: Int {
+        return (cardButtons.count + 1)/2
+        // создали отделную переменую что бы легко вычеслин количество панных карточекff
+    }
     
     @IBOutlet var cardButtons: [UIButton]!
     
